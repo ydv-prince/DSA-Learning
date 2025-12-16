@@ -30,7 +30,7 @@ public class DividenConquer {
                 i++;
             }
             else{
-                temp[k] = arr[j];
+                arr[k] = arr[j];
                 j++;
             }
             k++;
