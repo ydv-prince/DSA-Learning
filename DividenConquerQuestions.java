@@ -55,11 +55,53 @@ public class DividenConquerQuestions {
         }
     }
 
+    /*
+    Q2. Given an array nums of size n, return the majority element the majority element is the element that appears more then (n/2). You may assume that the majority element always exists in the array.
+     */
+
+    public static int countInRange(int[] nums, int num, int lo, int hi){
+        int count = 0;
+        for(int i = lo; i <= hi; i++){
+            if(nums[i] == num){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static int majorityElementRec(int[] nums, int lo, int hi){
+        if(lo == hi){
+            return nums[lo];
+        }
+
+        int mid = (hi-lo)/2 + lo;
+        int left = majorityElementRec(nums, lo, mid);
+        int right = majorityElementRec(nums, mid+1, hi);
+
+        if(left == right){
+            return left;
+        }
+        
+        int leftCount = countInRange(nums, left, lo, hi);
+        int rightCount = countInRange(nums, right, lo, hi);
+
+        return leftCount > rightCount ? left : right;
+    }
+
+    public static int majorityElement(int[] nums){
+        return majorityElementRec(nums, 0, nums.length-1);
+    }
+
     public static void main(String[] args) {
         int arr[] = {3,7,5,0,44,87,-2,12,34,90};
         int si = 0;
         int ei = arr.length-1;
         mergeSort(arr, si, ei);
         DividenConquer.printArr(arr);
+        System.out.println();
+
+        int nums[] = {2,2,1,2,1,1,1,4,5,1};
+        System.out.print("Majority Count: ");
+        System.out.println(majorityElement(nums));
     }
 }
