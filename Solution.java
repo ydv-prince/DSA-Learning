@@ -35,21 +35,73 @@
 // }
 
 
-import java.util.Arrays;
-class Solution {
-    public static boolean containsDuplicate(int[] nums) {
-        Arrays.sort(nums);
+// import java.util.Arrays;
+// class Solution {
+//     public static boolean containsDuplicate(int[] nums) {
+//         Arrays.sort(nums);
 
-        for(int i = 1; i < nums.length; i++){
-            if(nums[i] == nums[i-1]){
-                return true;
+//         for(int i = 1; i < nums.length; i++){
+//             if(nums[i] == nums[i-1]){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = {1,2,3,1};
+//         System.out.println(containsDuplicate(arr));
+//     }
+// }
+
+
+// //Problem: 283
+// class Solution {
+//     public static void moveZeroes(int[] nums) {
+//         int nonZero = 0;
+//         for(int i = 0; i < nums.length; i++){
+//             if(nums[i] != 0){
+//                 int temp = nums[i];
+//                 nums[i] = nums[nonZero];
+//                 nums[nonZero] = temp;
+//                 nonZero++;
+//             }
+//         }
+//         for(int i = 0; i < nums.length; i++){
+//             System.out.print(nums[i]+ " ");
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = {0};
+//         moveZeroes(arr);
+//     }
+// }
+
+//26. Remove Duplicates from Sorted Array
+class Solution {
+    public static int removeDuplicates(int[] nums) {
+        if(nums.length == 0){
+            return 0;
+        }
+        int write = 1;
+        for(int read = 1; read < nums.length; read++){
+            if(nums[read] != nums[read-1]){
+                nums[write] = nums[read];
+                write++;
             }
         }
-        return false;
+        return write;
     }
 
+    public static void printArr(int arr[]) {
+        for(int i=0; i <arr.length; i++){
+            System.out.print(arr[i]+ " ");
+        }
+    }
     public static void main(String[] args) {
-        int arr[] = {1,2,3,1};
-        System.out.println(containsDuplicate(arr));
+        int arr[] = {0,0,1,1,1,2,2,3,3,4,5,5,7,7,8,9,9};
+        System.out.println(removeDuplicates(arr));
+        printArr(arr);
     }
 }
