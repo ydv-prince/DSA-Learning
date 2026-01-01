@@ -78,30 +78,41 @@
 //     }
 // }
 
-//26. Remove Duplicates from Sorted Array
+// //26. Remove Duplicates from Sorted Array
+// class Solution {
+//     public static int removeDuplicates(int[] nums) {
+//         if(nums.length == 0){
+//             return 0;
+//         }
+//         int write = 1;
+//         for(int read = 1; read < nums.length; read++){
+//             if(nums[read] != nums[read-1]){
+//                 nums[write] = nums[read];
+//                 write++;
+//             }
+//         }
+//         return write;
+//     }
+//     public static void main(String[] args) {
+//         int arr[] = {0,0,1,1,1,2,2,3,3,4,5,5,7,7,8,9,9};
+//         System.out.println(removeDuplicates(arr));
+//     }
+// }
+
+//268. Missing Number
+import java.util.Arrays;
 class Solution {
-    public static int removeDuplicates(int[] nums) {
-        if(nums.length == 0){
-            return 0;
-        }
-        int write = 1;
-        for(int read = 1; read < nums.length; read++){
-            if(nums[read] != nums[read-1]){
-                nums[write] = nums[read];
-                write++;
+    public static int missingNumber(int[] nums) {
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] != i){
+                return i;
             }
         }
-        return write;
-    }
-
-    public static void printArr(int arr[]) {
-        for(int i=0; i <arr.length; i++){
-            System.out.print(arr[i]+ " ");
-        }
+        return nums.length;
     }
     public static void main(String[] args) {
-        int arr[] = {0,0,1,1,1,2,2,3,3,4,5,5,7,7,8,9,9};
-        System.out.println(removeDuplicates(arr));
-        printArr(arr);
+        int arr[] = {7,6,4,2,3,5,1,-1};
+        System.out.println(missingNumber(arr));
     }
 }
