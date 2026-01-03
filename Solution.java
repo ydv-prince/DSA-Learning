@@ -99,20 +99,66 @@
 //     }
 // }
 
-//268. Missing Number
-import java.util.Arrays;
+// //268. Missing Number
+// import java.util.Arrays;
+// class Solution {
+//     public static int missingNumber(int[] nums) {
+//         Arrays.sort(nums);
+//         for(int i=0; i<nums.length; i++){
+//             if(nums[i] != i){
+//                 return i;
+//             }
+//         }
+//         return nums.length;
+//     }
+//     public static void main(String[] args) {
+//         int arr[] = {7,6,4,2,3,5,1,-1};
+//         System.out.println(missingNumber(arr));
+//     }
+// }
+
+// //258. Add Digits
+// class Solution {
+//     public static int addDigits(int num) {
+//         return 1 + (num - 1) % 9;
+//         }
+
+//     public static void main(String[] args) {
+//         System.out.print(addDigits(0));
+//     }
+// }
+
+//204. Count Primes
 class Solution {
-    public static int missingNumber(int[] nums) {
-        Arrays.sort(nums);
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] != i){
-                return i;
+    public static int countPrimes(int n) {
+        if (n <= 2) return 0;
+        int arr[] = new int[n];
+        arr[0] = 0;
+        arr[1] = 0;
+
+        for(int i=2; i<n; i++){
+            arr[i] = 1;
+        }
+
+        for(int i=2; i*i < n; i++){
+            if(arr[i] == 1){
+                for(int j=i*i; j<n; j+=i){
+                    arr[j] = 0;
+                }
             }
         }
-        return nums.length;
+
+        int count = 0;
+        for(int i=2; i<n; i++){
+            if(arr[i] == 1){
+                count++;
+            }
+        }
+
+        return count;
     }
     public static void main(String[] args) {
-        int arr[] = {7,6,4,2,3,5,1,-1};
-        System.out.println(missingNumber(arr));
+        int n = 0;
+        System.out.print(countPrimes(n));
     }
 }
