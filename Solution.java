@@ -128,37 +128,77 @@
 //     }
 // }
 
-//204. Count Primes
+// //204. Count Primes
+// class Solution {
+//     public static int countPrimes(int n) {
+//         if (n <= 2) return 0;
+//         int arr[] = new int[n];
+//         arr[0] = 0;
+//         arr[1] = 0;
+
+//         for(int i=2; i<n; i++){
+//             arr[i] = 1;
+//         }
+
+//         for(int i=2; i*i < n; i++){
+//             if(arr[i] == 1){
+//                 for(int j=i*i; j<n; j+=i){
+//                     arr[j] = 0;
+//                 }
+//             }
+//         }
+
+//         int count = 0;
+//         for(int i=2; i<n; i++){
+//             if(arr[i] == 1){
+//                 count++;
+//             }
+//         }
+
+//         return count;
+//     }
+//     public static void main(String[] args) {
+//         int n = 0;
+//         System.out.print(countPrimes(n));
+//     }
+// }
+
+// //GFG: Second Largest
+// class Solution {
+//     public static int getSecondLargest(int[] arr) {
+//         int largest = arr[0];
+//         int secondLargest = -1;
+//         for(int i=0; i<arr.length; i++){
+//             if(arr[i] > largest){
+//                 secondLargest = largest;
+//                 largest = arr[i];
+//             }
+//             else if(arr[i] < largest && arr[i] > secondLargest){
+//                 secondLargest = arr[i];
+//             }
+//         }
+//     return secondLargest;
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = {12, 35, 1, 10, 34, 1};
+//         System.out.println(getSecondLargest(arr));
+//     }
+// }
+
+//326. Power of Three
 class Solution {
-    public static int countPrimes(int n) {
-        if (n <= 2) return 0;
-        int arr[] = new int[n];
-        arr[0] = 0;
-        arr[1] = 0;
+    public static boolean isPowerOfThree(int n) {
+        if(n <= 0) return false;
 
-        for(int i=2; i<n; i++){
-            arr[i] = 1;
+        while(n%3 == 0){
+            n = n/3;
         }
-
-        for(int i=2; i*i < n; i++){
-            if(arr[i] == 1){
-                for(int j=i*i; j<n; j+=i){
-                    arr[j] = 0;
-                }
-            }
-        }
-
-        int count = 0;
-        for(int i=2; i<n; i++){
-            if(arr[i] == 1){
-                count++;
-            }
-        }
-
-        return count;
+        return n == 1;
     }
+
     public static void main(String[] args) {
-        int n = 0;
-        System.out.print(countPrimes(n));
+        int n = 27;
+        System.out.println(isPowerOfThree(n));
     }
 }
