@@ -186,19 +186,69 @@
 //     }
 // }
 
-//326. Power of Three
-class Solution {
-    public static boolean isPowerOfThree(int n) {
-        if(n <= 0) return false;
+// //326. Power of Three
+// class Solution {
+//     public static boolean isPowerOfThree(int n) {
+//         if(n <= 0) return false;
 
-        while(n%3 == 0){
-            n = n/3;
+//         while(n%3 == 0){
+//             n = n/3;
+//         }
+//         return n == 1;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 27;
+//         System.out.println(isPowerOfThree(n));
+//     }
+// }
+
+//Alternates in an Array - 'https://www.geeksforgeeks.org/problems/print-alternate-elements-of-an-array/1'
+// import java.util.ArrayList;;
+// class Solution {
+//     public static ArrayList<Integer> getAlternates(int arr[]) {
+//         ArrayList<Integer> alternate= new ArrayList<Integer>();
+//         int i=0;
+//         int j=0;
+//         alternate.add(i++,arr[j+=2]);
+//         return alternate;
+//     }
+//     public static void main(String[] args) {
+//         int arr[] = {1,2,3,4,5,6,7,8};
+//         System.out.println(getAlternates(arr));
+//     }
+// }
+
+//941. Valid Mountain Array
+class Solution {
+    public static boolean validMountainArray(int[] arr) {
+        if(arr.length < 3) return false;
+        int n = arr.length;
+        int i=1;
+        int peak = -1;
+        while(i < n){
+            if(arr[i] <= arr[i-1]){
+                peak = i-1;
+                break;
+            }
+            i++;
         }
-        return n == 1;
+        if(peak <= 0 || peak >= n-1){
+                return false;
+            }
+
+        for(int j=peak+1; j<n; j++){
+            if(arr[j-1] <= arr[j]){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        int n = 27;
-        System.out.println(isPowerOfThree(n));
+        // int[] arr = {0,3,2,1};
+        // int[] arr = {3,5,5};
+        int[] arr = {4,4,3,2,1};
+        System.out.println(validMountainArray(arr));
     }
 }
