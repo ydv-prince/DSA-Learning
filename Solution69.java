@@ -11,7 +11,7 @@ public class Solution69 {
             int mid = left+(right-left)/2;
             if(mid > x/mid){
                 index = mid;
-                right = mid-1;;
+                right = mid-1;
             }
             else{
                 left = mid+1;
