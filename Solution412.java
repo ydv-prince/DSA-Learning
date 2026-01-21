@@ -5,17 +5,17 @@ public class Solution412 {
         List<String> result = new ArrayList<>();
 
         for(int i=1; i<=n; i++){
-            String currentString = "";
+            StringBuilder currentString = new StringBuilder();
             if(i % 3 == 0){
-                currentString += "Fizz";
+                currentString.append("Fizz");
             }
             if(i % 5 == 0){
-                currentString += "Buzz";
+                currentString.append("Buzz");
             }
             if(currentString.length() == 0){
-                currentString += i;
+                currentString.append(i);
             }
-            result.add(currentString);
+            result.add(currentString.toString());
         }
         return result;
     }
