@@ -32,6 +32,14 @@ public class Solution350 {
         }
         System.out.println();
     }
+
+    public static void printArrList(List<String> arr){
+        for(String str : arr){
+            System.out.print(str+" ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         int nums1[] = {4,9,5};
         int nums2[] = {9,4,9,8,4};
