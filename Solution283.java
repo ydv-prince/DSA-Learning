@@ -7,7 +7,7 @@ public class Solution283 {
                 nums[idx++] = nums[i];
             }
         }
-        while(idx <nums.length){
+        while(idx < nums.length){
             nums[idx++] = 0;
         }
     }
