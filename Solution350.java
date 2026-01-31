@@ -33,6 +33,16 @@ public class Solution350 {
         System.out.println();
     }
 
+    public static void printMatrix(int[][] matrix){
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length; j++){
+            System.out.print(matrix[i][j]+ " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
     public static void printArrList(List<String> arr){
         for(String str : arr){
             System.out.print(str+" ");
