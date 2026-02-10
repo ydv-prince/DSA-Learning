@@ -1,6 +1,6 @@
 //424. Longest Repeating Character Replacement
 public class Solution424 {
-    public int CharacterReplacement(String s, int k) {
+    public static int CharacterReplacement(String s, int k) {
         int[] frequency = new int[26];
         int left = 0;
         int maxFreq = 0;
@@ -19,5 +19,15 @@ public class Solution424 {
             }
         }
         return n - left;
+    }
+
+    public static void main(String[] args) {
+        // String s = "ABAB";
+        // int k = 2;
+
+        String s = "AABABBA";
+        int k = 1;
+
+        System.out.println(CharacterReplacement(s, k));
     }
 }
