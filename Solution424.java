@@ -1,0 +1,23 @@
+//424. Longest Repeating Character Replacement
+public class Solution424 {
+    public int CharacterReplacement(String s, int k) {
+        int[] frequency = new int[26];
+        int left = 0;
+        int maxFreq = 0;
+        int n = s.length();
+
+        for(int right=0; right<n; right++){
+            int currentIndex = s.charAt(right) - 'A';
+            frequency[currentIndex]++;
+            maxFreq = Math.max(maxFreq, frequency[currentIndex]);
+
+            int charToReplace = (right - left + 1) - maxFreq;
+            if(charToReplace > k){
+                int leftIndex = s.charAt(left) - 'A';
+                frequency[leftIndex]--;
+                left++;
+            }
+        }
+        return n - left;
+    }
+}
