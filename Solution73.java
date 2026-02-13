@@ -10,8 +10,8 @@ public class Solution73 {
         for(int i=0; i<rows; i++){
             for(int j=0; j<cols; j++){
                 if(matrix[i][j] == 0){
-                    zeroRows[i] = 0;
-                    zeroCols[j] = 0;
+                    zeroRows[i] = true;
+                    zeroCols[j] = true;
                 }
             }
         }
