@@ -1,21 +1,22 @@
 //14. Longest Common Prefix
-import java.util.Arrays;
 public class Solution14 {
     public static String longestCommonPrefix(String[] strs) {
-        Arrays.sort(strs);
-        String first = strs[0];
-        String last = strs[strs.length-1];
+        if(strs == null || strs.length == 0) return "";
 
-        int i=0;
-        while(i<first.length() && i<last.length() && first.charAt(i) == last.charAt(i)){
-            i++;
+        for(int i=0; i<strs[0].length(); i++){
+            char c = strs[0].charAt(i);
+            for(int j=1; j<strs.length; j++){
+                if(strs[j].length() == i || strs[j].charAt(i) != c){
+                    return strs[0].substring(0,i);
+                }
+            }
         }
-        return first.substring(0,i);
+        return strs[0];
     }
 
     public static void main(String[] args) {
-        String strs[] = {"flower","flow","flight"};
-        // String strs[] = {"dog","racecar","car"};
+        // String strs[] = {"flower","flow","flight"};
+        String strs[] = {"dog","racecar","car"};
         System.out.println(longestCommonPrefix(strs));
     }
 }
