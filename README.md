@@ -3,7 +3,7 @@
 
 ---
 
-##Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
+🔹 Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
 
 ### Emphasis on:
 
@@ -15,6 +15,6 @@
 ---
 
 ### Competitive Profile
-<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode-Active-FFA116?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"> <img src="https://img.shields.io/badge/GitHub-Consistent_Practice-181717?style=flat-square&logo=github"/> </a> </p>
+<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode-Active-FFA116?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"><br> <img src="https://img.shields.io/badge/GitHub-Consistent_Practice-181717?style=flat-square&logo=github"/> </a> </p>
 
 ---
