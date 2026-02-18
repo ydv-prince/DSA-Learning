@@ -1,5 +1,5 @@
 ### Data Structures & Algorithms
-<p align="center"> <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
+🔹 Language: Java
 
 ---
 
@@ -15,6 +15,6 @@
 ---
 
 ### Competitive Profile
-<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode-Active-FFA116?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"><br> <img src="https://img.shields.io/badge/GitHub-Consistent_Practice-181717?style=flat-square&logo=github"/> </a> </p>
+<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"><br> <img src="https://img.shields.io/badge/GitHub?style=flat-square&logo=github"/> </a> </p>
 
 ---
