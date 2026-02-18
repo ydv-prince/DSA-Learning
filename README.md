@@ -1,120 +1,23 @@
-🚀 Data Structures & Algorithms
+Data Structures & Algorithms
+<p align="center"> <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Problems-20%2B-blue?style=flat-square"/> <img src="https://img.shields.io/badge/Primary_Level-Medium-orange?style=flat-square"/> <img src="https://img.shields.io/badge/Focus-Product_Companies-black?style=flat-square"/> </p>
 
-A structured collection of LeetCode problem solutions focused on mastering core Data Structures & Algorithms concepts for technical interviews.
+---
 
-This repository reflects consistent practice, pattern recognition, and complexity optimization using Java.
+Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
 
-🎯 Purpose
+Emphasis on:
 
-Strengthen problem-solving skills
+Time & Space Complexity
 
-Master frequently asked interview patterns
+Pattern Recognition
 
-Improve time & space complexity analysis
+Clean, Interview-Ready Code
 
-Build consistency for technical interview preparation
+Edge Case Handling
 
-🧠 Topics & Problem Categories
-📌 Arrays
+---
 
-Contains Duplicate
+Competitive Profile
+<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode-Active-FFA116?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"> <img src="https://img.shields.io/badge/GitHub-Consistent_Practice-181717?style=flat-square&logo=github"/> </a> </p>
 
-Missing Number
-
-Move Zeroes
-
-Merge Sorted Array
-
-Monotonic Array
-
-Find All Lonely Numbers in the Array
-
-Product of Array Except Self
-
-Kth Largest Element in an Array
-
-🔁 Two Pointer Technique
-
-Two Sum II – Input Array Is Sorted
-
-Container With Most Water
-
-Merge Sorted Array
-
-🪟 Sliding Window
-
-Longest Substring Without Repeating Characters
-
-Longest Repeating Character Replacement
-
-🔎 Binary Search
-
-Search in Rotated Sorted Array
-
-🔄 Permutations
-
-Next Permutation
-
-🧵 Strings
-
-Longest Common Prefix
-
-Word Pattern
-
-First Unique Character in a String
-
-Reverse Integer
-
-🧱 Matrix Manipulation
-
-Set Matrix Zeroes
-
-Spiral Matrix
-
-⚙️ Concepts Practiced
-
-HashMap & HashSet usage
-
-Two Pointer pattern
-
-Sliding Window optimization
-
-Binary Search variations
-
-In-place matrix transformation
-
-Prefix product logic
-
-Heap / Priority Queue basics
-
-Time & Space Complexity analysis
-
-🛠 Tech Stack
-
-Java
-
-Git & GitHub for version control
-
-📈 Learning Progression
-
-Basic array manipulation
-
-Hashing techniques
-
-Pattern-based problem solving
-
-Optimization from brute-force to optimal
-
-Medium-level problem solving
-
-🎯 Current Focus
-
-Reducing brute-force implementations
-
-Improving runtime efficiency
-
-Strengthening pattern recognition
-
-Preparing for technical interviews
-
-⭐ Consistent daily practice toward mastering Data Structures & Algorithms.
+---
