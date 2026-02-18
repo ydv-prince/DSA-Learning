@@ -1,11 +1,11 @@
-Data Structures & Algorithms
+### Data Structures & Algorithms
 <p align="center"> <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
 
 ---
 
 ##Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
 
-###Emphasis on:
+### Emphasis on:
 
 - Time & Space Complexity
 - Pattern Recognition
@@ -14,7 +14,7 @@ Data Structures & Algorithms
 
 ---
 
-Competitive Profile
+### Competitive Profile
 <p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode-Active-FFA116?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"> <img src="https://img.shields.io/badge/GitHub-Consistent_Practice-181717?style=flat-square&logo=github"/> </a> </p>
 
 ---
