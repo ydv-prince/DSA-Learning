@@ -19,7 +19,7 @@ Structured daily practice for technical interviews focused on mastering core alg
 <p align="center">
   <a href="https://leetcode.com/prince-ydv">
     <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=flat-square&logo=leetcode&logoColor=black"/>
-  </a>
+  </a><br>
   <a href="https://github.com/ydv-prince">
     <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white"/>
   </a>
