@@ -1,19 +1,16 @@
 Data Structures & Algorithms
-<p align="center"> <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/> <img src="https://img.shields.io/badge/Problems-20%2B-blue?style=flat-square"/> <img src="https://img.shields.io/badge/Primary_Level-Medium-orange?style=flat-square"/> <img src="https://img.shields.io/badge/Focus-Product_Companies-black?style=flat-square"/> </p>
+<p align="center"> <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
 
 ---
 
-Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
+##Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
 
-Emphasis on:
+###Emphasis on:
 
-Time & Space Complexity
-
-Pattern Recognition
-
-Clean, Interview-Ready Code
-
-Edge Case Handling
+- Time & Space Complexity
+- Pattern Recognition
+- Clean, Interview-Ready Code
+- Edge Case Handling
 
 ---
 
