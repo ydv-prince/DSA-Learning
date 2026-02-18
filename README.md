@@ -1,20 +1,28 @@
-### Data Structures & Algorithms
-🔹 Language: Java
+## Data Structures & Algorithms  
+**Language:** Java  
 
 ---
 
-🔹 Daily practice for technical interviews through structured mastery of core algorithmic patterns and optimization techniques.
+Structured daily practice for technical interviews focused on mastering core algorithmic patterns and optimization techniques.
 
-### Emphasis on:
+### Emphasis
 
-- Time & Space Complexity
-- Pattern Recognition
-- Clean, Interview-Ready Code
-- Edge Case Handling
+- Time & Space Complexity Optimization  
+- Pattern Recognition & Problem Decomposition  
+- Clean, Interview-Ready Implementations  
+- Robust Edge Case Handling  
 
 ---
 
 ### Competitive Profile
-<p align="center"> <a href="https://leetcode.com/prince-ydv"> <img src="https://img.shields.io/badge/LeetCode?style=flat-square&logo=leetcode&logoColor=black"/> </a> <a href="https://github.com/ydv-prince"><br> <img src="https://img.shields.io/badge/GitHub?style=flat-square&logo=github"/> </a> </p>
+
+<p align="center">
+  <a href="https://leetcode.com/prince-ydv">
+    <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=flat-square&logo=leetcode&logoColor=black"/>
+  </a>
+  <a href="https://github.com/ydv-prince">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white"/>
+  </a>
+</p>
 
 ---
