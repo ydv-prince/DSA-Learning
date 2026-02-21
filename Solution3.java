@@ -1,9 +1,12 @@
 //3. Longest Substring Without Repeating Characters
 import java.util.HashMap;
+import java.util.Map;
 public class Solution3 {
     public static int lengthOfLongestSubstring(String s) {
-        HashMap<Character, Integer> count = new HashMap<>();
-        int left=0, maxLength=0;
+        Map<Character, Integer> count = new HashMap<>();
+
+        int left = 0;
+        int maxLength = 0;
 
         for(int right=0; right<s.length(); right++){
             char c = s.charAt(right);
@@ -17,13 +20,12 @@ public class Solution3 {
         }
 
         return maxLength;
-
     }
 
     public static void main(String[] args) {
-        // String s = "abcabcbb";
+        String s = "abcabcbb";
         // String s = "pwwkew";
-        String s = "bbbbb";
+        // String s = "bbbbb";
 
         System.out.println(lengthOfLongestSubstring(s));
     }
