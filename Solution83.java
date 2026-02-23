@@ -1,6 +1,6 @@
 //83. Remove Duplicates from Sorted List
 
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
     ListNode() {}
