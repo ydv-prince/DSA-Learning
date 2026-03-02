@@ -14,11 +14,11 @@ public class Solution160 {
         if(headA == null || headB == null) return null;
 
         ListNode pointerA = headA;
-        ListNode PointerB = headB;
+        ListNode pointerB = headB;
 
-        while(pointerA != null){
+        while(pointerA != pointerB){
             pointerA = (pointerA == null) ? headB : pointerA.next;
-            PointerB = (PointerB == null) ? headA : PointerB.next;
+            pointerB = (pointerB == null) ? headA : pointerB.next;
         }
         return pointerA;
     }
