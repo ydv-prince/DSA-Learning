@@ -1,8 +1,9 @@
 //19. Remove Nth Node From End of List
 class Solution19 {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0, head);
-        
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
         ListNode fastPointer = dummy;
         ListNode slowPointer = dummy;
 
