@@ -1,5 +1,4 @@
 // LinkedListHelper.java
-
 public class LInkedLIstHelper {
     // Build list from array
     public static ListNode buildList(int[] values) {
