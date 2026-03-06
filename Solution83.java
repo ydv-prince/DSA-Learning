@@ -1,13 +1,5 @@
 //83. Remove Duplicates from Sorted List
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
-
 public class Solution83 {
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode current = head;
