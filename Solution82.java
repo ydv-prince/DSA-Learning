@@ -1,6 +1,6 @@
 //82. Remove Duplicates from Sorted List II
 public class Solution82 {
-    public ListNode deleteDuplicates(ListNode head) {
+    public static ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         ListNode prev = dummy;
         ListNode curr = head;
