@@ -1,24 +1,25 @@
 //82. Remove Duplicates from Sorted List II
 public class Solution82 {
-    public static ListNode deleteDuplicates(ListNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
         ListNode dummy = new ListNode(0, head);
         ListNode prev = dummy;
         ListNode curr = head;
 
         while(curr != null){
-            while(curr.next != null && curr.next.val == curr.val){
-            curr = curr.next;
-            }
+            if(curr.next != null && curr.next.val == curr.val){
+                int duplicate = curr.val;
 
-            if(prev.next == curr){
-                prev = curr;
+                while(curr != null && curr.val == duplicate){
+                    curr = curr.next;
+                }
+                prev.next = curr;
             }
             else{
-                prev.next = curr.next;
+                prev = prev.next;
+                curr = curr.next;
             }
-            curr = curr.next;
+        
         }
-
         return dummy.next;
     }
 
