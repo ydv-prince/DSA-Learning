@@ -22,7 +22,7 @@ public class Solution92 {
             prev = curr;
             curr = next;
         }
-        
+
         connBeforeReverse.next = prev;
         firstNodeToReverse.next = curr;
 
