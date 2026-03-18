@@ -9,8 +9,7 @@ Structured daily practice for technical interviews focused on mastering core alg
 
 - Time & Space Complexity Optimization  
 - Pattern Recognition & Problem Decomposition  
-- Clean, Interview-Ready Implementations  
-- Robust Edge Case Handling  
+- Clean, Interview-Ready Implementations
 
 ---
 
