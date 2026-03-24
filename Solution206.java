@@ -1,5 +1,4 @@
 //206. Reverse Linked List
-
 public class Solution206 {
     public static ListNode reverseList(ListNode head) {
         ListNode dummyNode = new ListNode();
