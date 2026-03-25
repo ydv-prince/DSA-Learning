@@ -1,13 +1,19 @@
 //150. Evaluate Reverse Polish Notation
-import java.util.Deque;
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Solution150 {
     public static int evalRPN(String[] tokens) {
         Deque<Integer> stack = new ArrayDeque<>();
 
         for(String token : tokens){
-            if(token.length() > 1 || Character.isDigit(token.charAt(0))){
+            // if(token.length() > 1 || Character.isDigit(token.charAt(0))){
+            //     stack.push(Integer.parseInt(token));
+            // }
+            if(!token.equals("+") &&
+            !token.equals("-") &&
+            !token.equals("*") &&
+            !token.equals("/")){
                 stack.push(Integer.parseInt(token));
             }
             else{
