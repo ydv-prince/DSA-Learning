@@ -6,7 +6,6 @@ import java.util.Queue;
 public class Solution102{
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-
         if(root == null){ return result; }
 
         Queue<TreeNode> q = new ArrayDeque<>();
@@ -17,7 +16,7 @@ public class Solution102{
             List<Integer> level = new ArrayList<>();
 
             for(int i=0; i<size; i++){
-                TreeNode node = q.poll();
+                TreeNode node = new TreeNode();
                 level.add(node.val);
 
                 if(node.left != null){
