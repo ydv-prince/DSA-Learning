@@ -32,7 +32,8 @@ public class Solution2058{
             head = head.next;
         }
 
-        if(firstCriticalIndex == lastCriticalIndex){
+        // if(firstCriticalIndex == lastCriticalIndex){
+        if (result[0] == Integer.MAX_VALUE){
             return new int[]{-1, -1};
         }
 
