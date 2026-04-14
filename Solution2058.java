@@ -1,7 +1,7 @@
 //2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
 public class Solution2058{
     public static int[] nodesBetweenCriticalPoints(ListNode head) {
-        int[] result = {Integer.MAX_VALUE, 0git add };
+        int[] result = {Integer.MAX_VALUE, 0 };
 
         int firstCriticalIndex = -1;
         int lastCriticalIndex = -1;
