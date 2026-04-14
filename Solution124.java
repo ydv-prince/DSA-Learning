@@ -11,9 +11,10 @@ public class Solution124 {
         int leftSum = Math.max(0, calcMaxSum(node.left));
         int rightSum = Math.max(0, calcMaxSum(node.right));
 
-        int currSum = node.val + leftSum + rightSum;
-        maxSum = Math.max(maxSum, currSum);
+        int currSum = leftSum + rightSum + node.val;
 
-        return node.val + Math.max(leftSum, rightSum);
+        maxSum = Math.max(currSum, maxSum);
+
+        return Math.max(leftSum, rightSum) + node.val;
     }
 }
