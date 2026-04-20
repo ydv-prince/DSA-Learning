@@ -7,12 +7,12 @@ public class Solution222{
     }
 
     public static void main(String[] args) {
-        int[] values = {1,2,3,4,5,6};
+        // int[] values = {1,2,3,4,5,6};
         // int[] values = {};
-        // int[] values = {1};
+        int[] values = {1};
 
-        BinaryTrees tree = new BinaryTrees();
-        TreeNode root  = tree.buildTree(values);
+        TreeNode root = BInaryTReeHElper.buildTree(values);
+        BInaryTReeHElper.printTree(root);
 
         System.out.println(countNodes(root));
     }
