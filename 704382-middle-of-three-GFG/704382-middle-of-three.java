@@ -4,26 +4,23 @@ class Solution {
             if(b > c){
                 return b;
             }
-            else{
-                if(a> c){
+            else if(a> c){
                     return c;
-                }
-                else{
+                
+            }
+            else{
                     return a;
-                }
             }
         }
         else{
             if(a > c){
                 return a;
             }
-            else{
-                if(b > c){
+            else if(b > c){
                     return c;
-                }
-                else{
-                    return b;
-                }
+            }
+            else{
+                return b;
             }
         }
     }
