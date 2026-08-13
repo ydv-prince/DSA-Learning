@@ -1,20 +1,13 @@
 
 class Solution {
     public boolean findPair(int[] arr, int x) {
-        int n = arr.length;
+        HashSet<Integer> set = new HashSet<>();
         
-        Arrays.sort(arr);
-        
-        int j = 1;
-        
-        for(int i=0; i<n; i++){
-            while(j < n && arr[j] - arr[i] < x){
-                j++;
-            }
-            
-            if(j < n && i != j && arr[j] - arr[i] == x){
+        for(int num : arr){
+            if(set.contains(num - x) || set.contains(num + x)){
                 return true;
             }
+            set.add(num);
         }
         return false;
     }
