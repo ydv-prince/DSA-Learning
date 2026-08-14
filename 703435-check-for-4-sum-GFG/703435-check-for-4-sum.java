@@ -1,19 +1,27 @@
 class Solution {
     public boolean fourSum(int[] arr, int x) {
         int n = arr.length;
-        HashSet<Integer> set = new HashSet<>();
+        Arrays.sort(arr);
         
-        for(int j=1; j<n-1; j++){
-            for(int k=j+1; k<n; k++){
-                int required = x - arr[j] - arr[k];
+        for(int i=0; i<n-3; i++){
+            for(int j=i+1; j<n-2; j++){
+                int left = j+1;
+                int right = n-1;
                 
-                if(set.contains(required)){
-                    return true;
+                while(left < right){
+                    int sum = arr[i] + arr[j] + arr[left] + arr[right];
+                    
+                    if(sum == x){
+                        return true;
+                    }
+                    
+                    if(sum < x){
+                        left++;
+                    }
+                    else{
+                        right--;
+                    }
                 }
-            }
-            
-            for(int i=0; i<j; i++){
-                set.add(arr[i] + arr[j]);
             }
         }
         return false;
