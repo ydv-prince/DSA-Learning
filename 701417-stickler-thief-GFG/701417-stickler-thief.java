@@ -2,22 +2,31 @@ class Solution {
     public int findMaxSum(int arr[]) {
         int n = arr.length;
         
-        return maximumLoot(arr, n);
+        int[] memo = new int[n+1];
+        Arrays.fill(memo, -1);
+        
+        return maximumLoot(arr, n, memo);
     }
     
-    public int maximumLoot(int arr[], int n){
-        if(n <= 0){
+    int maximumLoot(int arr[], int n, int[] memo){
+        if (n <= 0){
             return 0;
+            
         }
         
-        if(n == 1){
+        if (n == 1){
             return arr[0];
         }
         
-        int pick = arr[n-1] + maximumLoot(arr, n-2);
-        int notPick = maximumLoot(arr, n-1);
+        if(memo[n] != -1){
+            return memo[n];
+        }
         
-        return Math.max(pick, notPick);
+        int pick = arr[n-1] + maximumLoot(arr, n-2, memo);
+        int notPick = maximumLoot(arr, n-1, memo);
+        
+        memo[n] = Math.max(pick, notPick);
+        return memo[n];
     }
 }
 
