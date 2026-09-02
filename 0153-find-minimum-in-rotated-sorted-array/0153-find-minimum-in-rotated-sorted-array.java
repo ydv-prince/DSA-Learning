@@ -1,0 +1,27 @@
+class Solution {
+    public int findMin(int[] nums) {
+        int n = nums.length;
+        int left = 0;
+        int right = n-1;
+        int ans = Integer.MAX_VALUE;
+
+        while(left <= right){
+            int mid = left + (right - left)/2;
+
+            if(nums[left] <= nums[mid]){
+                ans = Math.min(ans, nums[left]);
+                left = mid+1;
+            }
+            else{
+                ans = Math.min(ans, nums[mid]);
+                right = mid-1;
+            }
+        }
+        return ans;
+    }
+}
+
+
+// Synced seamlessly with LeetHub Pro
+// Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+// Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
