@@ -9,24 +9,26 @@ class Node {
 }*/
 
 class Solution {
-    
-    ArrayList<Integer> res = new ArrayList<>();
-    
     public ArrayList<Integer> inOrder(Node root) {
-        performInorderDFS(root);
-        return res;
-    }
-    
-    private void performInorderDFS(Node node){
-
-        if(node == null){
-            return;
+        ArrayList<Integer> res = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        
+        Node node = root;
+        while(true){
+            if(node != null){
+                stack.push(node);
+                node = node.left;
+            }
+            else{
+                if(stack.isEmpty()){
+                    break;
+                }
+                node = stack.pop();
+                res.add(node.data);
+                node = node.right;
+            }
         }
-
-        performInorderDFS(node.left);
-        res.add(node.data);
-        performInorderDFS(node.right);
-
+        return res;
     }
 }
 
