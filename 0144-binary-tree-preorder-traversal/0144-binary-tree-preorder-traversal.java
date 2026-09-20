@@ -14,19 +14,27 @@
  * }
  */
 class Solution {
-    private List<Integer> result = new ArrayList<>();
-
     public List<Integer> preorderTraversal(TreeNode root) {
-        performPreOrderDFS(root);
-        return result;
-    }
+        List<Integer> res = new ArrayList<>();
 
-    private void performPreOrderDFS(TreeNode node){
-        if(node == null){ return; }
+        if(root == null){ return res; }
 
-        result.add(node.val);
-        performPreOrderDFS(node.left);
-        performPreOrderDFS(node.right);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while(!stack.isEmpty()){
+            root = stack.pop();
+            res.add(root.val);
+
+            if(root.right != null){
+                stack.push(root.right);
+            }
+            if(root.left != null){
+                stack.push(root.left);
+            }
+        }
+
+        return res;
     }
 }
 
