@@ -14,27 +14,28 @@
  * }
  */
 class Solution {
-
-    List<Integer> res = new ArrayList<>();
-
     public List<Integer> inorderTraversal(TreeNode root) {
-        performInorderDFS(root);
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        TreeNode node = root;
+        while(true){
+            if(node != null){
+                stack.push(node);
+                node = node.left;
+            }
+            else{
+                if(stack.isEmpty()){
+                    break;
+                }
+                node = stack.pop();
+                res.add(node.val);
+                node = node.right;
+            }
+        }
         return res;
     }
-
-    private void performInorderDFS(TreeNode node){
-        
-        if(node == null){
-            return;
-        }
-
-        performInorderDFS(node.left);
-        res.add(node.val);
-        performInorderDFS(node.right);
-
-    }
 }
-
 
 // Synced seamlessly with LeetHub Pro
 // Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
