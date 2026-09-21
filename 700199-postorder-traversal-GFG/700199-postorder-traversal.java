@@ -10,18 +10,30 @@ class Node {
 */
 
 class Solution {
-    private ArrayList<Integer> res = new ArrayList<>();
-    public ArrayList<Integer> postOrder(Node root) {
-        performPostOrderDFS(root);
-        return res;
-    }
     
-    private void performPostOrderDFS(Node node){
-        if(node == null){ return; }
+    public ArrayList<Integer> postOrder(Node root) {
+        Stack<Node> st1 = new Stack<>();
+        Stack<Node> st2 = new Stack<>();
+        ArrayList<Integer> res = new ArrayList<>();
         
-        performPostOrderDFS(node.left);
-        performPostOrderDFS(node.right);
-        res.add(node.data);
+        st1.push(root);
+        while(!st1.isEmpty()){
+            root = st1.pop();
+            st2.add(root);
+            
+            if(root.left != null){
+                st1.push(root.left);
+            }
+            if(root.right != null){
+                st1.push(root.right);
+            }
+        }
+        
+        while(!st2.isEmpty()){
+            res.add(st2.pop().data);
+        }
+        
+        return res;
     }
 }
 
