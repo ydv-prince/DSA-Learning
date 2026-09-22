@@ -12,27 +12,28 @@ class Node {
 class Solution {
     
     public ArrayList<Integer> postOrder(Node root) {
-        Stack<Node> st1 = new Stack<>();
-        Stack<Node> st2 = new Stack<>();
         ArrayList<Integer> res = new ArrayList<>();
-        
-        st1.push(root);
-        while(!st1.isEmpty()){
-            root = st1.pop();
-            st2.add(root);
-            
-            if(root.left != null){
-                st1.push(root.left);
+        if(root == null){ return res; }
+
+        Stack<Node> st = new Stack<>();
+        Node lastVisited = null;
+
+        while(!st.isEmpty() || root != null){
+            if(root != null){
+                st.push(root);
+                root = root.left;
             }
-            if(root.right != null){
-                st1.push(root.right);
+            else{
+                Node peekNode = st.peek();
+                if(peekNode.right != null && lastVisited != peekNode.right){
+                    root = peekNode.right;
+                }
+                else{
+                    res.add(peekNode.data);
+                    lastVisited = st.pop();
+                }
             }
         }
-        
-        while(!st2.isEmpty()){
-            res.add(st2.pop().data);
-        }
-        
         return res;
     }
 }
