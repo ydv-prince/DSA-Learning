@@ -13,13 +13,9 @@ class Solution {
     public int getCount(Node head) {
         if(head == null) return 0;
         
-        int count = 0;
         Node curr = head;
-        while(curr != null){
-            count++;
-            curr = curr.next;
-        }
-        return count;
+        
+        return 1 + getCount(curr.next);
     }
 }
 
