@@ -15,11 +15,14 @@ class Solution {
         
         Node curr = head;
         
-        if(curr.data == key){
-            return true;
+        while(curr != null){
+            if(curr.data == key){
+                return true;
+            }
+            
+            curr = curr.next;
         }
-        
-        return searchKey(curr.next, key);
+        return false;
     }
 }
 
