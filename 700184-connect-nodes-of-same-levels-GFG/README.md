@@ -1,0 +1,4 @@
+# [Connect Nodes of Same Levels](https://www.geeksforgeeks.org/problems/connect-nodes-at-same-level/1)
+## Medium
+Given a binary tree, connect all nodes at the same level using an additional nextRight pointer for each node.Initially, all nextRight pointers contain garbage values (or null).Your function should set each node’s nextRight pointer to point to its immediate neighbor on the same level. The driver code will print the level-order traversalFor the rightmost node of a level, the nextRight would stay null.Examples: Input: root = [1, 2, 3, 4, 5, N, 6]Output: [1, #, 2, 3, #, 4, 5, 6, #]
+Explanation:The connected tree is:
