@@ -1,0 +1,7 @@
+# [Stack using Queue](https://www.geeksforgeeks.org/problems/stack-using-queue/1)
+## Medium
+Implement a&nbsp;Stack&nbsp;using Queue data structure, this stack has no fixed capacity and can grow dynamically until memory is available.The Stack must support the following operations:(i)&nbsp;push(x):&nbsp;Insert an element x at the top of the stack.(ii)&nbsp;pop(): Remove the element from the top of the stack, if stack is empty do nothing.(iii)&nbsp;top(): Return top element if not empty, else -1.(iv)&nbsp;size():&nbsp;Return the number of elements currently in the stack.There will be a sequence of queries&nbsp;queries[][]. The queries are represented in numeric form:1 x: Call push(x)2: Call pop()3: Call top()4: Call size()You just have to implement the functions&nbsp;push,&nbsp;pop, top&nbsp;and&nbsp;size.&nbsp;The driver code will handle the input and output.Examples:Input: queries[][] = [[1, 5], [1, 3], [1, 4], [3], [2], [4]]
+Output: [4, 2]
+Explanation: Queries on queue are as follows:push(5): Insert 5 at the top of the stack.push(3): Insert 3 at the top of the stack.push(4): Insert 4 at the top of the stack.top(): Return the top element i.e 4.pop(): Remove the top element 4 from the stack.size(): Stack contains 2 elements return 2.Input: queries[][] = [[4], [3], [1, 10], [3]]
+Output: [0, -1, 10]
+Explanation: Queries on queue are as follows:size(): Stack contains 0 elements return 0.top(): Stack is empty return -1.push(10): Insert 10 at the top of the stack.top(): Return the top element i.e 10.
