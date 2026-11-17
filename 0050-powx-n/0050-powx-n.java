@@ -1,30 +1,24 @@
 class Solution {
     public double myPow(double x, int n) {
-        long power = n;
+        return n >= 0 ? quickPower(x, n) : 1.0 / quickPower(x, -(long) n);
+    }
 
-        // Handle negative powers
-        if (power < 0) {
-            x = 1 / x;
-            power = -power;
-        }
-
-        double ans = 1;
-
-        while (power > 0) {
-
-            // If power is odd
-            if (power % 2 == 1) {
-                ans *= x;
+    private double quickPower(double base, long exponent) {
+        double result = 1.0;
+      
+        //process exponent bit by bit
+        while (exponent > 0) {
+            // If current bit is 1, multiply result by current base
+            if ((exponent & 1) == 1) {
+                result = result * base;
             }
-
-            // Square the base
-            x *= x;
-
-            // Divide power by 2
-            power /= 2;
+            // Square the base for the next bit position
+            base = base * base;
+            // Right shift to process the next bit
+            exponent >>= 1;
         }
-
-        return ans;
+      
+        return result;
     }
 }
 
